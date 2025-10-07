@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class BillGenerator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int pizzaPrice = 100;
+        int puffPrice = 20;
+        int drinkPrice = 10;
+        int pizzas = sc.nextInt();
+        int puffs = sc.nextInt();
+        int drinks = sc.nextInt();
+        int total = pizzas * pizzaPrice + puffs * puffPrice + drinks * drinkPrice;
+        System.out.println("Bill Details");
+        System.out.println("No of pizzas:" + pizzas);
+        System.out.println("No of puffs:" + puffs);
+        System.out.println("No of cooldrinks:" + drinks);
+        System.out.println("Total price=" + total);
+        System.out.println("ENJOY THE SHOW!!!");
+
+        sc.close();
+    }
+}
