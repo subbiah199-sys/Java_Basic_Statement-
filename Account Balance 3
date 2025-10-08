@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class BankProcess {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int balance = sc.nextInt();
+        int process = sc.nextInt();
+        if (process == 1) { 
+            int amount = sc.nextInt();
+            balance += amount;
+            System.out.println(balance);
+        } else if (process == 2) { 
+            int amount = sc.nextInt();
+            if (amount > balance) {
+                System.out.println("Insufficient Balance");
+            } else {
+                balance -= amount;
+                System.out.println(balance);
+            }
+        } else { 
+            System.out.println("Invalid Input");
+        }
+
+        sc.close();
+    }
+}
