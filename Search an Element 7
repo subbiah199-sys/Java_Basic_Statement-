@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = s.nextInt();
+        }
+        int find = s.nextInt();
+        boolean found = false;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == find) {
+                found = true;
+                break;
+            }
+        }
+   if (found) {
+            System.out.println(find + " is presented in an array.");
+        } else {
+            System.out.println(find + " is not presented in an array.");
+        }
+   s.close();
+    }
+}
